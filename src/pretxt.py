@@ -17,7 +17,9 @@ parser = argparse.ArgumentParser(description='Pretxt, render a template with pro
 parser.add_argument('-c', '--config', help='config file (YAML)', type=str)
 parser.add_argument("input", help="input file (Jinja2 template)", type=str)
 args = parser.parse_args()
-print(args)
+
+sys.stderr.write(str(args))
+sys.stderr.write('\n')
 
 def read_file(fname):
   res = None
@@ -40,8 +42,11 @@ def main():
 
   # Read YAML
   config = load(config_f, Loader=Loader)
-  print(config)
 
+  sys.stderr.write(str(config))
+  sys.stderr.write('\n')
+
+  # Read template
   env = Environment()
   templ = env.from_string(source=input_f)
   # print(env)
