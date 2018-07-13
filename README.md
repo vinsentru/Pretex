@@ -16,3 +16,6 @@ python3 src/pretxt.py -c config.yaml test.tmpl
 ```
 
 The rendered file goes to STDOUT, debug messages goes to STDERR
+
+TODO:
+- better error handling
