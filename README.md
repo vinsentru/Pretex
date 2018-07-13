@@ -1,5 +1,5 @@
 ### Pretext
-#### (c) Vladimir Shmalko 2018
+#### (c) Vinsent_ru 2018
 
 Pretxt is a small tool to render a Jinja2 template with values, provided in the YAML config file.
 Think of it as a modern variant of an m4 tool.
