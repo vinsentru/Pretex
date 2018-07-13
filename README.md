@@ -8,3 +8,11 @@ I've created it because I needed something to conditionally render some long tex
 For example, I'd like to add 18+ content in the resulting text, but only if an is18plus variable is set to 'true'.
 
 That way I can write my text once, and then easily render it to several different versions based on some conditions. Basically, it's possible to use any Jinja2 features like loops or conditional formatting.
+
+You can try it like this:
+
+```
+python3 src/pretxt.py -c config.yaml test.tmpl
+```
+
+The rendered file goes to STDOUT, debug messages goes to STDERR
