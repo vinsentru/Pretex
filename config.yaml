@@ -3,5 +3,5 @@ test2:
   - subtest1
   - subtest2
 
-vals:
+vars:
   is18plus: true

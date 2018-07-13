@@ -13,14 +13,6 @@ except ImportError:
     from yaml import Loader, Dumper
 
 
-parser = argparse.ArgumentParser(description='Pretxt, render a template with provided values')
-parser.add_argument('-c', '--config', help='config file (YAML)', type=str)
-parser.add_argument("input", help="input file (Jinja2 template)", type=str)
-args = parser.parse_args()
-
-sys.stderr.write(str(args))
-sys.stderr.write('\n')
-
 def read_file(fname):
   res = None
   if os.path.isfile(fname):
@@ -37,6 +29,14 @@ def read_file(fname):
   return  res
 
 def main():
+  parser = argparse.ArgumentParser(description='Pretxt, render a template with provided values')
+  parser.add_argument('-c', '--config', help='config file (YAML)', type=str)
+  parser.add_argument("input", help="input file (Jinja2 template)", type=str)
+  args = parser.parse_args()
+
+  sys.stderr.write(str(args))
+  sys.stderr.write('\n')
+
   input_f = read_file(args.input)
   config_f = read_file(args.config)
 
